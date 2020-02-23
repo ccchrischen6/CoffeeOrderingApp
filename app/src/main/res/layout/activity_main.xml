@@ -1,59 +1,83 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:layout_margin="20dp">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quantity" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/contentMargin"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/minus"
-        android:text="-"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        <EditText
+            android:id="@+id/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editText_1"
+            android:inputType="textMultiLine"
+            android:freezesText="true"
+            />
 
-        />
+        <TextView
+            style="@style/HeaderStyle"
+            android:text="@string/header_1" />
 
-    <TextView
-        android:id="@+id/quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"/>
+        <CheckBox
+            android:id="@+id/cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/contentMargin"
+            android:text="@string/checkBox_1"
+            android:textSize="@dimen/checkBoxTextSize" />
 
-    <Button
-        android:id="@+id/plus"
-        android:text="+"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        />
+        <CheckBox
+            android:id="@+id/chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/contentMargin"
+            android:paddingLeft="@dimen/contentMargin"
+            android:text="@string/checkBox_2"
+            android:textSize="@dimen/checkBoxTextSize" />
+
+        <TextView
+            style="@style/HeaderStyle"
+            android:text="@string/header_2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/contentMargin">
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+
+                />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/contentMargin"
+            android:onClick="submitOrder"
+            android:text="Order" />
+
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Price"/>
-
-    <TextView
-        android:id="@+id/detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="submitOrder"
-        android:text="Order"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="352dp" />
-
-</LinearLayout>
+</ScrollView>

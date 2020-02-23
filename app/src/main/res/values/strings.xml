@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Coffee Ordering App2</string>
+    <string name="header_1">Toppings</string>
+    <string name="header_2">Quantity</string>
+    <string name="header_3">Order Summary</string>
+    <string name="checkBox_1">Whipped cream</string>
+    <string name="checkBox_2">Chocolate</string>
+    <string name="editText_1">Name</string>
+    <string name="toast_1">You cannot have less than 1 coffee</string>
+    <string name="toast_2">You cannot have more than 99 coffee</string>
 </resources>
